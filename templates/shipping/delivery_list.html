@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Delivery Tasks</h2>
+<ul>
+  {% for ship in shipments %}
+    <li>Order #{{ ship.order.id }} - Status: {{ ship.status }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

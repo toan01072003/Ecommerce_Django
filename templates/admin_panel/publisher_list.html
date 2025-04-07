@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Publisher List{% endblock %}
+{% block content %}
+<h2>Publishers</h2>
+<ul>
+  {% for publisher in publishers %}
+    <li>
+      <strong>{{ publisher.name }}</strong><br>
+      {{ publisher.address.city }}, {{ publisher.address.nation }}<br>
+      Phone: {{ publisher.phone }}
+    </li>
+  {% empty %}
+    <li>No publishers found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
